@@ -1,0 +1,17 @@
+.bannerImageStyle{
+    width: auto;
+   
+}
+.bannerImageStyle img{
+    width: 100%;
+    height: 500px;
+}
+.caroCapStyle h1{
+    color: black;
+    font-weight: 700;
+    font-size: 29px;
+}
+.caroCapStyle p{
+    color: black;
+    font-size: 20px;
+}

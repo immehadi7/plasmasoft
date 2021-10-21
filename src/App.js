@@ -1,5 +1,6 @@
 import { BrowserRouter , Switch, Route} from "react-router-dom";
 import AboutUs from "./AllComponent/Pages/AboutUs/AboutUs";
+import Footer from "./AllComponent/Pages/Footer/Footer";
 import Header from "./AllComponent/Pages/Header/Header";
 import Home from "./AllComponent/Pages/Home/Home";
 import NotFound from "./AllComponent/Pages/NotFound/NotFound";
@@ -28,6 +29,7 @@ function App() {
                   <NotFound></NotFound>
                   </Route>
           </Switch>
+          <Footer></Footer>
       </BrowserRouter>
     </div>
   );

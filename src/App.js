@@ -6,6 +6,8 @@ import Home from "./AllComponent/Pages/Home/Home";
 import NotFound from "./AllComponent/Pages/NotFound/NotFound";
 import SeeAvailableDoc from "./AllComponent/Pages/SeeAvailableDoc/SeeAvailableDoc";
 import Services from "./AllComponent/Pages/Services/Services";
+import Login from "./AllComponent/Pages/Login/Login";
+import SignUp from "./AllComponent/Pages/SignUp/SignUp";
 
 function App() {
   return (
@@ -24,6 +26,12 @@ function App() {
                   </Route>
                   <Route path="/aboutus">
                   <AboutUs></AboutUs>
+                  </Route>
+                  <Route path="/login">
+                  <Login></Login>
+                  </Route>
+                  <Route path="/signup">
+                  <SignUp></SignUp>
                   </Route>
                   <Route path="*">
                   <NotFound></NotFound>

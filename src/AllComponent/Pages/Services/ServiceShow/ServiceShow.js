@@ -6,10 +6,10 @@ const ServiceShow = (props) => {
     const { images, details,Title } = props.service;
     
     return (
-        <div  className="container">
-             <h1>We are offerings</h1>
+        <div  className="serviceStyle">
+           
             <CardGroup>
-  <Card>
+  <Card style={{width:"18rem"}}>
     <Card.Img variant="top" src={images} />
     <Card.Body>
       <Card.Title>{Title}</Card.Title>

@@ -31,7 +31,7 @@ const Header = () => {
             <NavLink to="/seeavaialabledoc">See Available Doc</NavLink>
             <NavLink to="/aboutus">About Us</NavLink>
             {
-                    users?.email && <span style={{color:'white' , padding:"25px"}} >Hello {users.displayName}</span>
+                    users?.email && <span style={{color:'white' , padding:"15px"}} >Hello {users.displayName}</span>
                 }
 
             {

@@ -5,7 +5,13 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import "./header.css"
 import onMedi from "../../Images/OnMedi-removebg-preview.png";
+import useAuth from '../../Hooks/useAuth';
+import firebaseAuthentication from '../../Firebase/firebase.init';
+
+
+firebaseAuthentication()
 const Header = () => {
+    const {user , logOut} = useAuth()
     return (
         <div className="navbar-style">
             
@@ -24,8 +30,13 @@ const Header = () => {
             <NavLink to="/services">Services</NavLink>
             <NavLink to="/seeavaialabledoc">See Available Doc</NavLink>
             <NavLink to="/aboutus">About Us</NavLink>
-            <NavLink to="/login">Login</NavLink>
-            <NavLink to="/signup">Sign Up</NavLink>
+            
+
+            {
+                    user.email?   <button onClick={logOut} >Log Out</button>  :
+                    <NavLink to="/signup">Sign Up</NavLink>
+                }
+                
 
             </Navbar>
         </div>

@@ -6,12 +6,14 @@ import Home from "./AllComponent/Pages/Home/Home";
 import NotFound from "./AllComponent/Pages/NotFound/NotFound";
 import SeeAvailableDoc from "./AllComponent/Pages/SeeAvailableDoc/SeeAvailableDoc";
 import Services from "./AllComponent/Pages/Services/Services";
-import Login from "./AllComponent/Pages/Login/Login";
+/* import Login from "./AllComponent/Pages/Login/Login"; */
 import SignUp from "./AllComponent/Pages/SignUp/SignUp";
+import AuthProvider from "./AllComponent/Context/AuthProvider";
 
 function App() {
   return (
     <div className="">
+      <AuthProvider>
       <BrowserRouter>
       <Header></Header>
           <Switch>
@@ -27,9 +29,9 @@ function App() {
                   <Route path="/aboutus">
                   <AboutUs></AboutUs>
                   </Route>
-                  <Route path="/login">
+                 {/*  <Route path="/login">
                   <Login></Login>
-                  </Route>
+                  </Route> */}
                   <Route path="/signup">
                   <SignUp></SignUp>
                   </Route>
@@ -39,6 +41,9 @@ function App() {
           </Switch>
           <Footer></Footer>
       </BrowserRouter>
+
+      </AuthProvider>
+     
     </div>
   );
 }

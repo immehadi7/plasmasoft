@@ -13,6 +13,7 @@ import firebaseAuthentication from '../../Firebase/firebase.init';
 firebaseAuthentication()
 const SignUp = () => {
   
+
     const auth = getAuth();
 
     const [email, setEmail] = useState("");

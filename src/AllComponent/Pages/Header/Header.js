@@ -11,7 +11,7 @@ import firebaseAuthentication from '../../Firebase/firebase.init';
 
 firebaseAuthentication()
 const Header = () => {
-    const {user , logOut} = useAuth()
+    const {users , logOut} = useAuth()
     return (
         <div className="navbar-style">
             
@@ -30,10 +30,12 @@ const Header = () => {
             <NavLink to="/services">Services</NavLink>
             <NavLink to="/seeavaialabledoc">See Available Doc</NavLink>
             <NavLink to="/aboutus">About Us</NavLink>
-            
+            {
+                    users?.email && <span style={{color:'white' , padding:"25px"}} >Hello {users.displayName}</span>
+                }
 
             {
-                    user.email?   <button onClick={logOut} >Log Out</button>  :
+                    users.email?  <button onClick={logOut} >Log Out</button>  :
                     <NavLink to="/signup">Sign Up</NavLink>
                 }
                 

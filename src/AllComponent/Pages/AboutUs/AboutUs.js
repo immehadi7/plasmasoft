@@ -9,7 +9,7 @@ const AboutUs = () => {
       <h3> <span   style={{
             color: "#007d9e",
           }}>
-         OnMedi </span> of the 21st Century</h3>
+         Plasma Soft </span> of the 21st Century</h3>
       <p>
         {" "}
         We deliver the best veterinary experience for pets, pet parents, and vet

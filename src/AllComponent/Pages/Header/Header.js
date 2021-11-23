@@ -4,7 +4,8 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import "./header.css"
-import onMedi from "../../Images/OnMedi-removebg-preview.png";
+/* import onMedi from "../../Images/OnMedi-removebg-preview.png"; */
+import plasmaProfilePic from "../../Images/profile pasma.png" ;
 import useAuth from '../../Hooks/useAuth';
 import firebaseAuthentication from '../../Firebase/firebase.init';
 
@@ -16,11 +17,13 @@ const Header = () => {
         <div className="navbar-style">
             
 
-            <Navbar bg="dark">
+            <Navbar bg="light">
         <NavLink to="/" >
         <img
           alt=""
-          src={onMedi}
+          width="150"
+          height="25"
+          src={plasmaProfilePic}
           className="d-inline-block align-top"
         />
             
@@ -30,6 +33,7 @@ const Header = () => {
             <NavLink to="/services">Services</NavLink>
             <NavLink to="/seeavaialabledoc">See Available Doc</NavLink>
             <NavLink to="/aboutus">About Us</NavLink>
+            <NavLink to="/contactus">Contact Us</NavLink>
             {
                     users?.email && <span style={{color:'white' , padding:"15px"}} >Hello {users.displayName}</span>
                 }
@@ -39,7 +43,7 @@ const Header = () => {
                     <NavLink to="/signup">Sign Up</NavLink>
                 }
                 
-
+            
             </Navbar>
         </div>
     );

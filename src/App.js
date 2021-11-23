@@ -10,6 +10,7 @@ import Services from "./AllComponent/Pages/Services/Services";
 import SignUp from "./AllComponent/Pages/SignUp/SignUp";
 import AuthProvider from "./AllComponent/Context/AuthProvider";
 import PrivateRoute from "./AllComponent/PrivateRoute/PrivateRoute";
+import ContactUS from "./AllComponent/Pages/ContactUs/ContactUS";
 
 function App() {
   return (
@@ -36,9 +37,15 @@ function App() {
                   <Route path="/signup">
                   <SignUp></SignUp>
                   </Route>
+                  <Route path="/contactus">
+                  <ContactUS></ContactUS>
+                  </Route>
+                  {/* not found part added in the last */}
                   <Route path="*">
                   <NotFound></NotFound>
                   </Route>
+                 
+
           </Switch>
           <Footer></Footer>
       </BrowserRouter>

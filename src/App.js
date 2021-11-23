@@ -11,6 +11,7 @@ import SignUp from "./AllComponent/Pages/SignUp/SignUp";
 import AuthProvider from "./AllComponent/Context/AuthProvider";
 import PrivateRoute from "./AllComponent/PrivateRoute/PrivateRoute";
 import ContactUS from "./AllComponent/Pages/ContactUs/ContactUS";
+import CovidPatient from "./AllComponent/Pages/CovidPatient/CovidPatient";
 
 function App() {
   return (
@@ -22,9 +23,9 @@ function App() {
                   <Route exact path="/">
                   <Home></Home>
                   </Route>
-                  <Route path="/services">
+                 {/*  <Route path="/services">
                   <Services></Services>
-                  </Route>
+                  </Route> */}
                   <PrivateRoute path="/seeavaialabledoc">
                   <SeeAvailableDoc></SeeAvailableDoc>
                   </PrivateRoute>
@@ -40,6 +41,11 @@ function App() {
                   <Route path="/contactus">
                   <ContactUS></ContactUS>
                   </Route>
+                  <Route path="/covidpatient">
+                  <CovidPatient></CovidPatient>
+                  </Route>
+
+
                   {/* not found part added in the last */}
                   <Route path="*">
                   <NotFound></NotFound>

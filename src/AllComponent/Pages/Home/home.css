@@ -2,3 +2,12 @@
     margin:20px 20px ;
 
 }
+.serviceCardStyle{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}
+.services{
+    font-weight: 700;
+    color: rgb(3, 35, 141);
+}

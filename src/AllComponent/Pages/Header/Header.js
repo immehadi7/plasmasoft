@@ -30,10 +30,12 @@ const Header = () => {
         </NavLink>
        
             <NavLink to="/">Home</NavLink>
-            <NavLink to="/services">Services</NavLink>
+         {/*    <NavLink to="/services">Services</NavLink> */}
             <NavLink to="/seeavaialabledoc">See Available Doc</NavLink>
-            <NavLink to="/aboutus">About Us</NavLink>
+            <NavLink to="/covidpatient">Covid Patient</NavLink>
             <NavLink to="/contactus">Contact Us</NavLink>
+         
+            <NavLink to="/aboutus">About Us</NavLink>
             {
                     users?.email && <span style={{color:'white' , padding:"15px"}} >Hello {users.displayName}</span>
                 }

@@ -1,41 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { Row } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
-import HomeDrservice from './HomeDrService/HomeDrservice';
+import ServiceShow from '../Services/ServiceShow/ServiceShow';
+
 import "./home.css";
-import { useHistory } from 'react-router';
+
 
 const Home = () => {
-    const history = useHistory();
-    const [homedrs , setHomeDr] = useState([])
+    const[services , setServices] = useState([])
     useEffect(()=>{
-        fetch(`https://immehadi7.github.io/jsonapi/homeDrservice.json`)
-        .then(res=>res.json())
-        .then(data => setHomeDr(data))
-    },[])
-
-    const seeMoreDoc = () =>{
-        history.push("/seeavaialabledoc");
-    }
+        fetch(`https://immehadi7.github.io/jsonapi/servicesUpdate.json`)
+            .then(res=>res.json())
+                .then(data=> setServices(data))
+    },[]);
+    
     return (
         <div>
           <Banner></Banner>
+          {/* banner part end  */}
 
-        <div className='container m-5'>
-            <h1>We have specialists Doctor</h1>
-            <Row xs={1} md={4} className="homedrservice">{
-                homedrs.map(homedr => <HomeDrservice  key={homedr.id}
-                homedr={homedr}
-                >
-                </HomeDrservice>)
+
+        {/* services part start from here */}
+        <div className="container">
+             <h1 className="text-center m-5 services"> Services </h1>
+             <div  className="serviceCardStyle">
+             {
+               services.map(service=><ServiceShow key={service.id}
+                service={service}
+                ></ServiceShow> )
             }
-            
-
-            </Row>
-
-            <br />
-            <br />
-            <button onClick={seeMoreDoc} className="bg-primary text-center">See more Doctor</button>
+             </div>
+          
         </div>
 
 

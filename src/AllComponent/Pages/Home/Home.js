@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Table } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
+import CovidLiveData from '../CovidLiveData/CovidLiveData';
 import ServiceShow from '../Services/ServiceShow/ServiceShow';
 
 import "./home.css";
@@ -8,20 +9,29 @@ import "./home.css";
 
 const Home = () => {
     const[services , setServices] = useState([])
-    const [liveDatas, setliveDatas] = useState()
+    const [liveshowData , setliveshowData] = useState()
+
+    /* set services part  */
     useEffect(()=>{
         fetch(`https://immehadi7.github.io/jsonapi/servicesUpdate.json`)
             .then(res=>res.json())
                 .then(data=> setServices(data))
     },[]);
+
+
+
+
+    /* set data show part */
+
     useEffect(()=>{
         fetch(`https://api.covid19api.com/summary`)
             .then(res=>res.json())
-                .then(data=> setliveDatas(data.Global))
+                .then(data=> setliveshowData(data))
     },[])
-
-
-
+/*     const showDatasArr = liveDatas.split(',');
+    console.log(showDatasArr);  */
+   /*  console.log(liveDatas); */
+    
 
 
 
@@ -43,16 +53,26 @@ const Home = () => {
                 ></ServiceShow> )
             }
              </div>
-        {/*------- services part end here  --- */}
+       
         </div>
-        
-        {/* live data shown of covid */}
-        <div className="container">
-            <h1>Covid 19 live data</h1>
-            {
-                liveDatas.map(livedata=>console.log(livedata))
-            }
+ {/*------- services part end here  --- */}
 
+
+
+
+        {/* live data shown of covid */}
+         <div className="container m-5">
+            <h1 className="text-center m-5">Covid 19 live data</h1>
+          
+       
+          {/*  {liveshowData.map(dataShow =>   <CovidLiveData   dataShow={dataShow}>
+          </CovidLiveData> )
+
+           } */}
+
+          
+        
+           
 
         <Table striped bordered hover size="sm">
   <thead>
@@ -66,10 +86,10 @@ const Home = () => {
   </thead>
   <tbody>
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>45674</td>
+      <td>3245</td>
+      <td>4456436</td>
+      <td>232314</td>
     </tr>
    
   </tbody>
@@ -77,11 +97,13 @@ const Home = () => {
 
         </div>
 
+           
+
+        {/* Get help part  */}
 
 
-
-
-
+ 
+ 
 
 
 

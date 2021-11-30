@@ -1,6 +1,8 @@
 import React from 'react';
 
-const CovidLiveData = () => {
+const CovidLiveData = (props) => {
+      const {NewConfirmed , NewDeaths ,TotalConfirmed ,TotalDeaths } = props.dataShow ;
+   console.log(props.liveData);
     return (
         <div>
             

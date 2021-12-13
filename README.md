@@ -1,18 +1,12 @@
 
-# OnMedi -ONline medical service
+# Plasmasoft:
 
-We are Medical online . We provide service 
+It's a covid 19 based platfrom where covid patient information and describe about health care as well.
 
-## Points
 
- - We have various types of service in service component
 
- - we are on time active anytime responds 24/7
- - Spealists doctor 
- - Doctor from all over the world
-  
-## Authors
+## Acknowledgement:
 
-- [@Md Mehedi hasan](https://github.com/immehadi7)
+ - [Md. Mehedi Hasan](https://github.com/immehadi7)
 
-  
+

@@ -14,7 +14,7 @@ const Footer = () => {
               textAlign: "left",
             }}
           >
-            <h5> About OnMedi</h5>
+            <h5> About Plasma-Soft</h5>
             <p>
               {" "}
               Ut wisi enim ad minim veniam, quis nostrud exerci tation

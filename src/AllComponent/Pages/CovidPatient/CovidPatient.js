@@ -8,14 +8,14 @@ import "./covidpatient.css"
 const CovidPatient = () => {
     const [patientLists , setpatientLists] = useState([])
     useEffect(()=>{
-        fetch(`https://immehadi7.github.io/jsonapi/covidpatients.json`)
+        fetch(`https://immehadi7.github.io/jsonapi/covpatient.json`)
         .then(res=> res.json())
         .then(data=>setpatientLists(data))
     },[])
     return (
         <div>
-            <h1>Covid patients information are here</h1>
-            <div className="serviceCardStyle">
+            <h1 className='text-center'>Covid patients information are here</h1>
+            <div className="container mt-3 mb-2 serviceCardStyle ">
             {
                 patientLists.map(info => <AllCovidPa key={info.id} info={info} ></AllCovidPa> )
                 }

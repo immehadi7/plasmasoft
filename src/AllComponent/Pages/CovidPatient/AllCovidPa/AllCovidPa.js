@@ -2,14 +2,14 @@ import React from 'react';
 import { Card , Button, CardGroup } from 'react-bootstrap';
 import "./allpatient.css"
 const AllCovidPa = (props) => {
-    const {name , id , image , covidPatient , readyForPlasma } = props.info ;
+    const {name , id ,  covidPatient , readyForPlasma } = props.info ;
     
     return (
         <div classname="serviceStyle">
             <CardGroup>
 <Card style={{width:"18rem"}}>
-  <Card.Img variant="top" src={image} width="220px" height="300px"	
- />
+ {/*  <Card.Img variant="top" src={image} width="220px" height="300px"	
+ /> */}
   <Card.Body>
     <Card.Title> {name}</Card.Title>
     <Card.Title> ID no: {id}</Card.Title>

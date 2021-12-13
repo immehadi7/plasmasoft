@@ -3,6 +3,8 @@ import { Row, Table } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import CovidLiveData from '../CovidLiveData/CovidLiveData';
 import ServiceShow from '../Services/ServiceShow/ServiceShow';
+import symtromsimg from '../../Images/symptomsofcovid.png';
+
 
 import "./home.css";
 
@@ -58,6 +60,41 @@ const Home = () => {
  {/*------- services part end here  --- */}
 
 
+      {/* recognize covid19 syndroms part start  */}
+      <div className="container m-5">
+        <h1 className="text-center text-black" >Top Symptoms of covid19</h1>
+        <div className='text-center '>
+          <img src={symtromsimg} width='1100' height='auto' className='img-fluid shadow-4 mt-2' alt="top 5 symptomps of covid 19" fluid />
+        </div>
+        <div>
+        <h4>
+          <p>Didn't you get vaccinate yet?
+ <a href="https://surokkha.gov.bd/enroll">Registration here</a> </p>
+        </h4>
+        </div>
+       
+      </div>
+
+      {/* recognize covid19 syndroms part end  */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         {/* live data shown of covid */}
@@ -86,10 +123,10 @@ const Home = () => {
   </thead>
   <tbody>
     <tr>
-      <td>45674</td>
-      <td>3245</td>
-      <td>4456436</td>
-      <td>232314</td>
+      <td>55786</td>
+      <td>3255</td>
+      <td>4593242</td>
+      <td>23252</td>
     </tr>
    
   </tbody>

@@ -74,7 +74,7 @@ const SignUp = () => {
     return (
       <div className="d-flex justify-content-center ">
         <div className="sign-in shadow-lg my-5  px-5">
-          <h3 className="text-center pt-5"> LOGIN TO OnMedi</h3>
+          <h3 className="text-center pt-5"> LOGIN TO PLASMASOFT</h3>
           <hr className="w-75 ms-auto me-auto" />
           <div className="d-flex justify-content-around">
             <button type="button" class="fb my-2 " onClick={FacebookSignin}>
